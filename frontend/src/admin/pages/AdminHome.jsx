@@ -9,7 +9,7 @@ import Profile from "./Profile";
 
 
 
-const EmpHome = () => {
+const AdminHome = () => {
     const[openSidebar,setOpenSidebar]=useState(false);
       const {  Loading } = useUserDetails();
      if(Loading){
@@ -58,4 +58,4 @@ const EmpHome = () => {
 
 
 
-export default EmpHome;
+export default AdminHome;

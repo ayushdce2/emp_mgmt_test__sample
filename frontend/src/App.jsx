@@ -6,7 +6,7 @@ import {BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
 import RefreshHandler from './auth/RefreshHandler.jsx';
 // import EmployeeHome from "./employee/EmployeeHome.jsx";
 // import HrHome from "./hr/HrHome.jsx";
-// import AdminHome from "./admin/AdminHome.jsx";
+import AdminHome from "./admin/pages/AdminHome.jsx";
 import {UserDetailsProvider} from "./utility/UserDetailsContext.jsx";
 import {AppThemeProvider} from "./utility/ThemeContext.jsx";
 import EmployeeHome from './employee/pages/EmpHome.jsx';
@@ -34,8 +34,7 @@ function App() {
 
           
           <Route path={"/employee/*"} element={<PrivateRoute element={<UserDetailsProvider><AppThemeProvider><EmployeeHome/></AppThemeProvider></UserDetailsProvider>}/>}></Route>
-          {/* <Route path={"/hr/*"} element={<PrivateRoute element={<UserDetailsProvider><HrHome/></UserDetailsProvider>}/>}></Route> */}
-          {/* <Route path={"/admin/*"} element={<PrivateRoute element={<UserDetailsProvider><AdminHome/></UserDetailsProvider>}/>}></Route> */}
+          <Route path={"/admin/*"} element={<PrivateRoute element={<UserDetailsProvider><AppThemeProvider><AdminHome/></AppThemeProvider></UserDetailsProvider>}/>}></Route>
     
   
         </Routes>

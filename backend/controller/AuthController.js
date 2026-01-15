@@ -71,14 +71,14 @@ const {email,_id}= req.user;
 const LogOutFunction = async (req,res)=>{
 try {
     // console.log(req.body,"req.body");
-        const {  _id, email, loginedOn_data } = req.body;
+        const {  _id, email } = req.body;
 
         const existingUser = await UserModel.findOne({ email });
         if (!existingUser) {
             return res.status(403).json({ message: 'User Not Found', success: false });
         }
         
-        await UserModel.findByIdAndUpdate(_id,{loginedOn: loginedOn_data},{new:true})
+        // await UserModel.findByIdAndUpdate(_id,{loginedOn: loginedOn_data},{new:true})
 
 // console.log(updateLoginedOn,"<=================updateLoginedOn")
         

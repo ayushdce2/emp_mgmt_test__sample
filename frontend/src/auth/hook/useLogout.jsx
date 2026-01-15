@@ -22,13 +22,11 @@ const useLogout = () => {
   const handleLogout = async () => {
     const _id = userProfileDetails[0]._id;
     const email = userProfileDetails[0].email;
-    const loginedOn_data = localStorage.getItem("loginedOn_data");
-      // console.log(loginedOn_data,"loginedOn_data")
 
 
     try {
       // console.log(email, "email")
-      const res = await API.post("/auth/logout", {_id,email,loginedOn_data});
+      const res = await API.post("/auth/logout", {_id,email});
       const resJson = await res.data;
       // console.log(resJson,"<----------------resposne LOCAL");
       const { message, success, error, name, userRole } = resJson;
@@ -48,8 +46,6 @@ const useLogout = () => {
 
     } catch (error) {
       console.log(error);
-      // error.status == "400" && handleError(error.response.data.error.details[0].message);
-      // error.status == "403" && handleError(error.response.data.message)
     }
 
 
@@ -64,7 +60,7 @@ const useLogout = () => {
 
 
 
-  // return {loggedInUser, handleLogout}
+
   return { handleLogout }
 }
 

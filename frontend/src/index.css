@@ -5,12 +5,12 @@
 
 @font-face {
   font-family: contentfont;
-  src: url("/font/Roboto-Regular.ttf");
+  src: url("/assets/font/Roboto-Regular.ttf");
 }
 
 @font-face {
   font-family: headingfont;
-  src: url("/font/Poppins-Regular.ttf");
+  src: url("/assets/font/Poppins-Regular.ttf");
 }
 
 *{

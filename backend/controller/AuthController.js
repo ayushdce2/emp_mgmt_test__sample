@@ -37,9 +37,9 @@ const LoginFunction = async (req,res)=>{
         }
 
         const jwtToken = jwt.sign(
-                {email:existingUser.email, _id:existingUser._id},
+                {email:existingUser.email, _id:existingUser._id,userRole:existingUser.userRole,name:existingUser.name},
                 process.env.JWT_Secret,
-                {expiresIn:"20m"}
+                // {expiresIn:"20m"}
         )
         
 

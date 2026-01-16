@@ -17,6 +17,7 @@ const isUserAuthenticated = (req,res,next)=>{
             // console.log(req.user,"auth working");
         next();
     }catch(error){
+        // console.log(req.user,"auth ");
         return res.status(403).json({message:"Unauthorized Access or expired"})
     }
 }

@@ -7,7 +7,7 @@
 // const {isLeaveDataValid} = require("../middlewares/isLeaveDataValid.js")
 const {isUserAuthorize} = require("../middleware/isUserAuthorize");
 const {isUserAuthenticated} = require("../middleware/isUserAuthenticated");
-const {applyattendancefunction,attendancehistoryfunction} = require("../controller/EmpController")
+const {manageattendancefunction,allattendancehistoryfunction} = require("../controller/AdminController")
 
 
 const router = require("express").Router();
@@ -17,8 +17,8 @@ const router = require("express").Router();
 
 // router.get("/attendance/viewattendance",isUserAuthenticated, getLeaveSummary); 
 
-router.post("/attendance/applyattendance",isUserAuthenticated, isUserAuthorize("employee"), applyattendancefunction);
-router.get("/attendance/attendancehistory",isUserAuthenticated, isUserAuthorize("employee"), attendancehistoryfunction);
+router.put("/attendance/:id",isUserAuthenticated, isUserAuthorize("admin"), manageattendancefunction);
+router.get("/attendance/attendancehistory",isUserAuthenticated, isUserAuthorize("admin"), allattendancehistoryfunction);
 
 // router.post("/attendance/applyattendance",isUserAuthenticated, isUserAuthorize(["employee"]),applyattendancefunction);
 

@@ -35,23 +35,19 @@ const Sidebar = (props) => {
 
         </div>
 
-        <nav className="flex-1 px-4 space-y-2" >
-          <Link to="/admin" onClick={() => { setOpenSidebar(!openSidebar) }} className={`${pathname=="/admin" && "bg-white/20"} flex items-center gap-3 p-3 rounded-lg cursor-pointer transition-all  hover:bg-white/20 hover:bg-white/20 hover:translate-x-1 `}>
+        <nav className="flex-1 px-4 space-y-2">
+          <Link to="/admin" onClick={() => { setOpenSidebar(false) }} className={`${pathname=="/employee" && "bg-white/20"} flex items-center gap-3 p-3 rounded-lg cursor-pointer transition-all  hover:bg-white/20 hover:bg-white/20 hover:translate-x-1 `}>
             <FaTachometerAlt /> Dashboard
           </Link>
-          <Link to="" className={`flex items-center gap-3 p-3 rounded-lg cursor-pointer transition-all hover:bg-white/20 hover:bg-white/20 hover:translate-x-1 `}>
-            <FaUsers /> Employees
+         
+          <Link to="/admin/viewattendance" onClick={() => { setOpenSidebar(false) }} className={`${pathname=="/employee/attendance" && "bg-white/20"} flex items-center gap-3 p-3 rounded-lg cursor-pointer transition-all hover:bg-white/20 hover:bg-white/20 hover:translate-x-1 `}>
+            <FaClipboardList /> Manage Attendance
           </Link>
           <Link to="" className={`flex items-center gap-3 p-3 rounded-lg cursor-pointer transition-all hover:bg-white/20 hover:bg-white/20 hover:translate-x-1 `}>
-            <FaClipboardList /> Attendance
+            <FaMoneyCheckAlt /> Manage Leave
           </Link>
-          <Link to="" className={`flex items-center gap-3 p-3 rounded-lg cursor-pointer transition-all hover:bg-white/20 hover:bg-white/20 hover:translate-x-1 `}>
-            <FaMoneyCheckAlt /> Payroll
-          </Link>
-          <Link to="" className={`flex items-center gap-3 p-3 rounded-lg cursor-pointer transition-all hover:bg-white/20 hover:bg-white/20 hover:translate-x-1 `}>
-            <FaCog /> Settings
-          </Link>
-                    <Link to="/admin/profile" onClick={() => { setOpenSidebar(!openSidebar) }} className={`${pathname=="/admin/profile" && "bg-white/20"} flex items-center gap-3 p-3 rounded-lg cursor-pointer transition-all hover:bg-white/20 hover:bg-white/20 hover:translate-x-1 `}>
+         
+                    <Link to="/admin/profile" onClick={() => { setOpenSidebar(false) }} className={`${pathname=="/employee/profile" && "bg-white/20"} flex items-center gap-3 p-3 rounded-lg cursor-pointer transition-all hover:bg-white/20 hover:bg-white/20 hover:translate-x-1 `}>
             <FaUser /> Profile
           </Link>
          

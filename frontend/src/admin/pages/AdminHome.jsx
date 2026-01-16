@@ -1,10 +1,11 @@
 import { useState } from "react";
-import Sidebar from "../components/Sidebar";
-import Navbar from "../components/Navbar";
-import Dashboard from "./Dashboard";
+import Sidebar from "../components/Sidebar.jsx";
+import Navbar from "../components/Navbar.jsx";
+import Dashboard from "./Dashboard.jsx";
 import { Routes, Route } from "react-router-dom";
-import {useUserDetails} from "../../utility/UserDetailsContext" ;
-import Profile from "./Profile";
+import {useUserDetails} from "../../utility/UserDetailsContext.jsx" ;
+import Profile from "./Profile.jsx";
+import Attandance from "./Attandance.jsx"
 
 
 
@@ -36,7 +37,7 @@ const AdminHome = () => {
                             <Route path={"/"} element={<Dashboard />}></Route>
                             <Route path={"/profile"} element={<Profile />}></Route>
                             {/* <Route path={"/settings"} element={<Settings />}></Route> */}
-                            {/* <Route path={"/attandance"} element={<Attandance/>}></Route> */}
+                            <Route path={"/viewattendance"} element={<Attandance/>}></Route>
                             {/* <Route path={"/leave"} element={<Leave/>}></Route> */}
 
                             

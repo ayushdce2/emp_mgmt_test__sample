@@ -5,6 +5,7 @@ import Dashboard from "./Dashboard";
 import { Routes, Route } from "react-router-dom";
 import {useUserDetails} from "../../utility/UserDetailsContext" ;
 import Profile from "./Profile";
+import Attandance from "./Attandance.jsx"
 
 
 
@@ -36,7 +37,7 @@ const EmpHome = () => {
                             <Route path={"/"} element={<Dashboard />}></Route>
                             <Route path={"/profile"} element={<Profile />}></Route>
                             {/* <Route path={"/settings"} element={<Settings />}></Route> */}
-                            {/* <Route path={"/attandance"} element={<Attandance/>}></Route> */}
+                            <Route path={"/attendance"} element={<Attandance/>}></Route>
                             {/* <Route path={"/leave"} element={<Leave/>}></Route> */}
 
                             

@@ -39,18 +39,14 @@ const Sidebar = (props) => {
           <Link to="/employee" onClick={() => { setOpenSidebar(false) }} className={`${pathname=="/employee" && "bg-white/20"} flex items-center gap-3 p-3 rounded-lg cursor-pointer transition-all  hover:bg-white/20 hover:bg-white/20 hover:translate-x-1 `}>
             <FaTachometerAlt /> Dashboard
           </Link>
-          <Link to="" className={`flex items-center gap-3 p-3 rounded-lg cursor-pointer transition-all hover:bg-white/20 hover:bg-white/20 hover:translate-x-1 `}>
-            <FaUsers /> Employees
-          </Link>
-          <Link to="" className={`flex items-center gap-3 p-3 rounded-lg cursor-pointer transition-all hover:bg-white/20 hover:bg-white/20 hover:translate-x-1 `}>
+         
+          <Link to="/employee/attendance" onClick={() => { setOpenSidebar(false) }} className={`${pathname=="/employee/attendance" && "bg-white/20"} flex items-center gap-3 p-3 rounded-lg cursor-pointer transition-all hover:bg-white/20 hover:bg-white/20 hover:translate-x-1 `}>
             <FaClipboardList /> Attendance
           </Link>
           <Link to="" className={`flex items-center gap-3 p-3 rounded-lg cursor-pointer transition-all hover:bg-white/20 hover:bg-white/20 hover:translate-x-1 `}>
-            <FaMoneyCheckAlt /> Payroll
+            <FaMoneyCheckAlt /> Leave
           </Link>
-          <Link to="" className={`flex items-center gap-3 p-3 rounded-lg cursor-pointer transition-all hover:bg-white/20 hover:bg-white/20 hover:translate-x-1 `}>
-            <FaCog /> Settings
-          </Link>
+         
                     <Link to="/employee/profile" onClick={() => { setOpenSidebar(false) }} className={`${pathname=="/employee/profile" && "bg-white/20"} flex items-center gap-3 p-3 rounded-lg cursor-pointer transition-all hover:bg-white/20 hover:bg-white/20 hover:translate-x-1 `}>
             <FaUser /> Profile
           </Link>

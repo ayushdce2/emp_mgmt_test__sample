@@ -44,7 +44,11 @@ const LeaveSchema = new Schema({
   appliedAt:{
     timestamps:true
 }
-});
+},
+{
+    timestamps:true
+}
+);
 
 const LeaveModel = mongoose.model("Leave", LeaveSchema);
 

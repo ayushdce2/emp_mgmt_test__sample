@@ -6,10 +6,11 @@ const Profile = () => {
     // console.log(userProfileDetails,"userProfileDetails")
   return (
     <>
-<div className="bg-white dark:bg-gray-800 rounded-xl shadow p-6">
     <div className='p-1 rounded bg-gradient-to-r from-blue-400 to-indigo-200 text-white dark:from-blue-600 dark:to-indigo-400'>
-        <p className=' px-2  font-bold tracking-wider text-2xl text-shadow-2xs'>Profile</p>
+        <p className=' px-2  font-bold tracking-wider text-2xl text-shadow-2xs headingfont'>Profile</p>
     </div>
+<div className="bg-white dark:bg-gray-800 rounded-xl shadow p-3">
+    
 <div className='p-1'>
     <div className=' py-2  flex items-center gap-2'>
 <p className='text-gray-500  dark:text-gray-300 py-2  text-lg'>Full Name: </p>

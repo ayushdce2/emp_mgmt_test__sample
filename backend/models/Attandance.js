@@ -6,22 +6,25 @@ const AttandanceSchema = new Schema({
     type: String,
     required: true,
   },
-  punchInValue: {
-    type: Date,
+  todaysDate: {
+    type:String,
     default: null,
   },
-  punchOutValue: {
-    type: Date,
-    default: null,
+  markattendaceStatus:{
+    type:String,
+    default:null
   },
-  Workinghours: {
-    type: String,
-    default: null,
+  userRole:{
+    type:String,
+    default:null
   },
-  Workingminutes: {
-    type: String,
-    default: null,
-  },
+   name:{
+    type:String,
+    default:null
+  }
+},
+{
+    timestamps:true
 });
 
 const AttandanceModel = mongoose.model("Attandance", AttandanceSchema);

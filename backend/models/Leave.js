@@ -6,12 +6,15 @@ const LeaveSchema = new Schema({
     type: String,
     required: true,
   },
-  userRole:{
-        type:String,
-        required:true,
-    },
+  name: {
+    type: String,
+    required: true,
+  },
+  
+ 
   leave_type:{
     type: String,
+    // default: null,
     required: true
   },
   date_from: {
@@ -30,20 +33,10 @@ const LeaveSchema = new Schema({
     type: String,
     default: "waiting",
   },
-  total_leaves:{
-    type:String,
-    default:0
-  },
-  total_absent:{
-    type:String,
-    default:0
-  },
+
   total_leave_days:{
     type:String
-  },
-  appliedAt:{
-    timestamps:true
-}
+  }
 },
 {
     timestamps:true

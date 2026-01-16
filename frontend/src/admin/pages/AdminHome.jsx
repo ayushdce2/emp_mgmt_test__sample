@@ -5,7 +5,8 @@ import Dashboard from "./Dashboard.jsx";
 import { Routes, Route } from "react-router-dom";
 import {useUserDetails} from "../../utility/UserDetailsContext.jsx" ;
 import Profile from "./Profile.jsx";
-import Attandance from "./Attandance.jsx"
+import Attandance from "./Attandance.jsx";
+import Leave from "./Leave.jsx"
 
 
 
@@ -36,9 +37,8 @@ const AdminHome = () => {
     <Routes>
                             <Route path={"/"} element={<Dashboard />}></Route>
                             <Route path={"/profile"} element={<Profile />}></Route>
-                            {/* <Route path={"/settings"} element={<Settings />}></Route> */}
                             <Route path={"/viewattendance"} element={<Attandance/>}></Route>
-                            {/* <Route path={"/leave"} element={<Leave/>}></Route> */}
+                            <Route path={"/viewleave"} element={<Leave/>}></Route>
 
                             
 

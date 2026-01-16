@@ -28,6 +28,9 @@ const ActivityItem = ({ text }) => (
 const Dashboard = () => {
   return (
     <>
+    <div className='p-1 rounded bg-gradient-to-r from-blue-400 to-indigo-200 text-white dark:from-blue-600 dark:to-indigo-400'>
+        <p className=' px-2  font-bold tracking-wider text-2xl text-shadow-2xs headingfont'>Dashboard</p>
+    </div>
     {/* Stats */}
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
                   <StatCard title="Employees" value="120" icon={<FaUsers />} color="from-blue-500 to-indigo-500" />

@@ -4,16 +4,16 @@
 // const {isUpdatePasswordDataValid} = require("../middlewares/isUpdatePasswordDataValid.js");
 // const {isPunchInDataValid} = require("../middlewares/isPunchInDataValid.js");
 // const {isPunchOutDataValid} = require("../middlewares/isPunchOutDataValid.js");
-// const {isLeaveDataValid} = require("../middlewares/isLeaveDataValid.js")
+const {isLeaveDataValid} = require("../middleware/isLeaveDataValid.js")
 const {isUserAuthorize} = require("../middleware/isUserAuthorize");
 const {isUserAuthenticated} = require("../middleware/isUserAuthenticated");
-const {applyattendancefunction,attendancehistoryfunction} = require("../controller/EmpController")
+const {applyattendancefunction,attendancehistoryfunction, applyleavefunction,getLeaveSummary} = require("../controller/EmpController")
 
 
 const router = require("express").Router();
 
-// router.post("/leave/apply",isUserAuthenticated, isLeaveDataValid, applyleavefunction);
-// router.get("/leave/summary",isUserAuthenticated, getLeaveSummary); 
+router.post("/leave/applyleave",isUserAuthenticated, isUserAuthorize("employee"), isLeaveDataValid, applyleavefunction);
+router.get("/leave/leavesummary",isUserAuthenticated, isUserAuthorize("employee"),getLeaveSummary); 
 
 // router.get("/attendance/viewattendance",isUserAuthenticated, getLeaveSummary); 
 

@@ -10,7 +10,7 @@ const Attandance = () => {
         return "Loading";
     }
 
-console.log(attendanceSummary,"attendanceSummary");
+// console.log(attendanceSummary,"attendanceSummary");
   return (
     <>
         <div className='p-1 rounded bg-gradient-to-r from-blue-400 to-indigo-200 text-white dark:from-blue-600 dark:to-indigo-400'>

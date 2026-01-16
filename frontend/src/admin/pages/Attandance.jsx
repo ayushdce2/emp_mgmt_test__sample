@@ -1,16 +1,18 @@
 import useManageAttendance from "../hook/useManageAttendance";
 import useGetAttendanceHistory from "../hook/useGetAttendanceHistory";
+import useFilterAttendance from "../hook/useFilterAttendance";
 
 const Attandance = () => {
  
-    const {attendanceSummary,setAttendanceSummary,loading,refetch} = useGetAttendanceHistory();   
+    const {attendanceSummary,setAttendanceSummary,loading,refetch,tempSummary,setTempSummary} = useGetAttendanceHistory();   
     const {handleAttendanceChanges} = useManageAttendance({refetch});
+    const {SearchFunction} = useFilterAttendance({attendanceSummary,setTempSummary})
     
     if(loading){
         return "Loading";
     }
 
-console.log(attendanceSummary,"attendanceSummary");
+console.log(tempSummary,"attendanceSummary");
   return (
     <>
         <div className='p-1 rounded bg-gradient-to-r from-blue-400 to-indigo-200 text-white dark:from-blue-600 dark:to-indigo-400'>
@@ -19,9 +21,15 @@ console.log(attendanceSummary,"attendanceSummary");
   
 
     <div className="bg-white dark:bg-gray-800 rounded-xl shadow p-3 h-[calc(77vh-1rem)] overflow-auto">
-         <h2 className="text-lg font-semibold mb-4 text-gray-700 dark:text-gray-200">
+         <div className="flex justify-between">
+         <h2 className="text-lg font-semibold mb-4 text-gray-700 dark:text-gray-200 ">
                     All Attendance History
                   </h2>
+                  
+                  <div>
+                    <input type="search" className="bg-gray-100 text-sm p-1" placeholder="Search Employee" onChange={(e)=>{SearchFunction(e.target.value)}}/>
+                  </div>
+                  </div>
                   <div className='shadow'>
                     <div className='flex text-blue-400'>
                         <div className='p-2 font-semibold w-16'>S.No.</div>
@@ -34,8 +42,9 @@ console.log(attendanceSummary,"attendanceSummary");
 
                   </div>
                   <form>
+                    {console.log(tempSummary,"tempSummary")}
                   {
-                    attendanceSummary && attendanceSummary.map((data,index)=>{
+                    tempSummary.length !=0 ? tempSummary.map((data,index)=>{
                         return(
                             
                                 <div className='flex text-blue-300 hover:bg-blue-50 dark:hover:bg-indigo-500' key={data._id}>
@@ -54,7 +63,7 @@ console.log(attendanceSummary,"attendanceSummary");
                     </div>
                             
                         )
-                    })
+                    }) : <p className="text-gray-400 text-center p-8">No Record Found</p>
                     
                   }
                    

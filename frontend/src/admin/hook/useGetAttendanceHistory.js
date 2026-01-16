@@ -3,7 +3,8 @@ import API from '../../utility/axios.jsx';
 
 const useGetAttendanceHistory = () => {
 
-    const [attendanceSummary,setAttendanceSummary]=useState(null);
+    const [attendanceSummary,setAttendanceSummary]=useState([]);
+    const [tempSummary,setTempSummary]=useState(attendanceSummary)
     const [loading,setLoading] = useState(true);
 
     const headers ={
@@ -18,6 +19,7 @@ const useGetAttendanceHistory = () => {
             const data = await response.data;
             console.log(data,"data");
             setAttendanceSummary(data)
+            setTempSummary(data)
             setLoading(false)
         }catch(error){
             console.log(error)
@@ -26,7 +28,7 @@ const useGetAttendanceHistory = () => {
     useEffect(()=>{
         fetchAttendaceHistory();
     },[])
-  return {attendanceSummary,setAttendanceSummary,loading,refetch:fetchAttendaceHistory}
+  return {attendanceSummary,setAttendanceSummary,loading,refetch:fetchAttendaceHistory,tempSummary,setTempSummary}
 }
 
 export default useGetAttendanceHistory

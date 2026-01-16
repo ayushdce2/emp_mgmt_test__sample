@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from "react-router-dom";
 import { FaUserTie, FaEnvelope, FaLock } from "react-icons/fa";
 import useLogin from './hook/useLogin.jsx';
-import PingServer from "./hook/PingServer.js";
+import PingServer from "../utility/PingServer.js";
 
 const Login = () => {
 
@@ -17,7 +17,7 @@ if(loadingserver){
     <>
 <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-300 to-indigo-200">
       
-      <div className="w-full max-w-md bg-[#fff] rounded-2xl shadow-2xl p-8">
+      <div className="w-[90%] md:w-full max-w-md bg-[#fff] rounded-2xl shadow-2xl p-8">
         
         {/* Icon + Title */}
         <div className="flex flex-col items-center mb-6">

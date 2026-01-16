@@ -22,6 +22,7 @@ function RefreshHandler({setisAuthenticated}) {
                 userRole==="employee" && navigate("/employee",{replace:false});
                 userRole==="admin" && navigate("/admin",{replace:false});                
             }
+           
         }else{
             setisAuthenticated(false);
         }   

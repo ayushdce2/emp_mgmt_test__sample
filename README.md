@@ -154,7 +154,6 @@ npm start
 
 * Email notification system not implemented
 * No biometric or geo-location based attendance
-* Basic UI animations only
 * Unit testing not added
 
 ---

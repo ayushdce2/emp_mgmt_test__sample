@@ -6,14 +6,15 @@ This project was developed as part of a Full-Stack Developer technical assignmen
 
 ---
 
-## 🚀 Live Demo
+## Live Demo
 
 Frontend URL: https://empmgmttestsample.vercel.app/
+
 Backend API URL: https://emp-mgmt-test-sample.onrender.com/api
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 ### Frontend
 
@@ -41,7 +42,7 @@ Backend API URL: https://emp-mgmt-test-sample.onrender.com/api
 
 ---
 
-## ✨ Features
+## Features
 
 ### Employee Features
 
@@ -61,7 +62,7 @@ Backend API URL: https://emp-mgmt-test-sample.onrender.com/api
 
 ---
 
-## 🔐 Authentication & Authorization
+## Authentication & Authorization
 
 * JWT based authentication
 * Password hashing using bcrypt
@@ -71,7 +72,7 @@ Backend API URL: https://emp-mgmt-test-sample.onrender.com/api
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 root
@@ -96,7 +97,7 @@ root
 
 ---
 
-## 📦 Installation & Setup
+## Installation & Setup
 
 ### Clone Repository
 
@@ -126,7 +127,7 @@ npm start
 
 ---
 
-## 📡 API Endpoints
+## API Endpoints
 
 ### Auth Routes
 
@@ -149,7 +150,7 @@ npm start
 
 ---
 
-## ⚠ Known Limitations
+## Known Limitations
 
 * Email notification system not implemented
 * No biometric or geo-location based attendance
@@ -158,7 +159,7 @@ npm start
 
 ---
 
-## ⏱ Time Spent
+## Time Spent
 
 Approximate development time:
 

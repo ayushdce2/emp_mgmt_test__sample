@@ -14,8 +14,8 @@ const Leave = () => {
         <p className=' px-2  font-bold tracking-wider text-2xl text-shadow-2xs headingfont'>Leave</p>
         <p>Leave Balance: <span className="text-gray-900 font-bold px-2">0{userProfileDetails[0].leaveBalance}</span></p>
     </div>
-<div className="bg-white dark:bg-gray-800 rounded-xl flex flex-wrap justify-between items-start">
-    <div className="   p-3 md:w-[38%]">
+<div className="bg-white dark:bg-gray-800 rounded-xl flex flex-col md:flex-row md:justify-between md:items-start">
+    <div className="   p-3 w-auto md:w-[38%]">
         
                   
          <h2 className="text-lg font-semibold mb-4 text-gray-700 dark:text-gray-200">
@@ -117,7 +117,7 @@ const Leave = () => {
         {/* <button onClick={markTodaysAttendance} className='p-1 px-2 shadow text-lg rounded-lg bg-blue-400 text-gray-100 hover:bg-indigo-400 cursor-pointer font-semibold'>{buttonText}</button> */}
     </div>
 
-    <div className="  p-3 h-[calc(77vh-1rem)] md:w-[60%] overflow-auto">
+    <div className="  p-3 h-[calc(77vh-1rem)] w-[85vw] text-nowrap  md:w-[60%] overflow-auto">
          <h2 className="text-lg font-semibold mb-4 text-gray-700 dark:text-gray-200">
                     Leave History
                   </h2>

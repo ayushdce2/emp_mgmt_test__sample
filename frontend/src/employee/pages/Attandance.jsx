@@ -29,9 +29,9 @@ const Attandance = () => {
                   </h2>
                   <div className='shadow'>
                     <div className='flex text-blue-400'>
-                        <div className='p-2 font-semibold w-16'>S.No.</div>
-                        <div className='p-2 font-semibold w-35'>Date</div>
-                        <div className='p-2 font-semibold w-40'>Status</div>
+                        <div className='p-2 font-semibold w-15'>S.No.</div>
+                        <div className='p-2 font-semibold w-25'>Date</div>
+                        <div className='p-2 font-semibold w-20'>Status</div>
 
                     </div>
 
@@ -41,9 +41,9 @@ const Attandance = () => {
                         return(
                             
                                 <div className='flex text-blue-300 hover:bg-blue-50 dark:hover:bg-indigo-500' key={data._id}>
-                        <div className='p-2  w-16 text-center'>{index+1}</div>
-                        <div className='p-2 w-35'>{data.todaysDate}</div>
-                        <div className='p-2 w-40 text-green-300'>{data.markattendaceStatus}</div>
+                        <div className='p-2  w-15 text-center'>{index+1}</div>
+                        <div className='p-2 w-25'>{data.todaysDate}</div>
+                        <div className='p-2 w-20 text-green-300'>{data.markattendaceStatus}</div>
 
                     </div>
                             

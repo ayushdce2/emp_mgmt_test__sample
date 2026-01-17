@@ -20,7 +20,7 @@ const Attandance = () => {
       </div>
 
 
-      <div className="bg-white dark:bg-gray-800 rounded-xl w-[21rem] shadow p-3 h-[calc(77vh-1rem)] overflow-auto">
+      <div className="bg-white dark:bg-gray-800 rounded-xl w-[21rem] md:w-full shadow p-3 h-[calc(77vh-1rem)] overflow-auto">
         <div className="flex justify-between ">
           <h2 className="text-lg font-semibold mb-4 text-gray-700 dark:text-gray-200 ">
             All Attendance History

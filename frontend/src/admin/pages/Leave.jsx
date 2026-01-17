@@ -18,7 +18,7 @@ const Leave = () => {
             <div className="bg-white dark:bg-gray-800 rounded-xl ">
 
 
-                <div className="  p-3 h-[calc(77vh-1rem)] w-[21rem]  overflow-auto">
+                <div className="  p-3 h-[calc(77vh-1rem)] w-[21rem] md:w-full overflow-auto">
                     <h2 className="text-lg font-semibold mb-4 text-gray-700 dark:text-gray-200">
                         Leave History
                     </h2>

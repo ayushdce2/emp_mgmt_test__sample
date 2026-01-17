@@ -4,10 +4,9 @@ const isUserAuthorize = (...roles) => {
     if (!roles.includes(req.user.userRole)) {
       return res.status(403).json({ message: "Access denied" });
     }
-    
+
     next();
   };
 };
 
-
-module.exports = {isUserAuthorize};
+module.exports = { isUserAuthorize };

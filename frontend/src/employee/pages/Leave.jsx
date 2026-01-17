@@ -117,7 +117,7 @@ const Leave = () => {
         {/* <button onClick={markTodaysAttendance} className='p-1 px-2 shadow text-lg rounded-lg bg-blue-400 text-gray-100 hover:bg-indigo-400 cursor-pointer font-semibold'>{buttonText}</button> */}
     </div>
 
-    <div className="  p-3 h-[calc(77vh-1rem)] w-[85vw]   md:w-[60%] overflow-auto">
+    <div className="  p-3  max-h-[calc(77vh-1rem)] w-[85vw]   md:w-[60%] overflow-auto">
          <h2 className="text-lg font-semibold mb-4 text-gray-700 dark:text-gray-200">
                     Leave History
                   </h2>
@@ -141,7 +141,7 @@ const Leave = () => {
                         <div className='p-2 w-15 shrink-0 text-center'>{index+1}</div>
                         <div className='p-2 w-30 shrink-0'>{data.leave_status}</div>
                         <div className='p-2 w-25 shrink-0'>{data.leave_type}</div>
-                        <div className='p-2 w-25 shrink-0 text-green-300'>{data.total_leave_days}</div>
+                        <div className='p-2 w-25 shrink-0 text-green-300 text-center'>{data.total_leave_days}</div>
                         <div className='p-2 shrink-0 w-25'>{new Date(data.date_from).toLocaleDateString()}</div>
                         <div className='p-2 shrink-0 w-25'>{new Date(data.date_to).toLocaleDateString()}</div>
 

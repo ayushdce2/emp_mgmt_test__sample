@@ -117,18 +117,18 @@ const Leave = () => {
         {/* <button onClick={markTodaysAttendance} className='p-1 px-2 shadow text-lg rounded-lg bg-blue-400 text-gray-100 hover:bg-indigo-400 cursor-pointer font-semibold'>{buttonText}</button> */}
     </div>
 
-    <div className="  p-3 h-[calc(77vh-1rem)] w-[85vw] text-nowrap  md:w-[60%] overflow-auto">
+    <div className="  p-3 h-[calc(77vh-1rem)] w-[85vw]   md:w-[60%] overflow-auto">
          <h2 className="text-lg font-semibold mb-4 text-gray-700 dark:text-gray-200">
                     Leave History
                   </h2>
                   <div className='shadow'>
                     <div className='flex text-blue-400'>
-                        <div className='p-2 font-semibold w-16'>S.No.</div>
-                        <div className='p-2 font-semibold w-35'>Leave Status</div>
-                        <div className='p-2 font-semibold w-40'>Leave Type</div>
-                        <div className='p-2 font-semibold w-40'>Total Days</div>
-                        <div className='p-2 font-semibold w-40'>From</div>
-                        <div className='p-2 font-semibold w-40'>To</div>
+                        <div className='p-2 font-semibold w-15 shrink-0'>S.No.</div>
+                        <div className='p-2 font-semibold w-30 shrink-0'>Leave Status</div>
+                        <div className='p-2 font-semibold w-25 shrink-0'>Leave Type</div>
+                        <div className='p-2 font-semibold w-25 shrink-0'>Total Days</div>
+                        <div className='p-2 font-semibold w-25 shrink-0'>From</div>
+                        <div className='p-2 font-semibold w-25 shrink-0'>To</div>
 
                     </div>
 
@@ -138,12 +138,12 @@ const Leave = () => {
                         return(
                             
                     <div className='flex text-blue-300 hover:bg-blue-50 dark:hover:bg-indigo-500' key={data._id}>
-                        <div className='p-2  w-16 text-center'>{index+1}</div>
-                        <div className='p-2 w-35'>{data.leave_status}</div>
-                        <div className='p-2 w-40'>{data.leave_type}</div>
-                        <div className='p-2 w-40 text-green-300'>{data.total_leave_days}</div>
-                        <div className='p-2 w-40'>{new Date(data.date_from).toLocaleDateString()}</div>
-                        <div className='p-2 w-40'>{new Date(data.date_to).toLocaleDateString()}</div>
+                        <div className='p-2 w-15 shrink-0 text-center'>{index+1}</div>
+                        <div className='p-2 w-30 shrink-0'>{data.leave_status}</div>
+                        <div className='p-2 w-25 shrink-0'>{data.leave_type}</div>
+                        <div className='p-2 w-25 shrink-0 text-green-300'>{data.total_leave_days}</div>
+                        <div className='p-2 shrink-0 w-25'>{new Date(data.date_from).toLocaleDateString()}</div>
+                        <div className='p-2 shrink-0 w-25'>{new Date(data.date_to).toLocaleDateString()}</div>
 
                     </div>
                             

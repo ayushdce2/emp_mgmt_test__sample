@@ -30,22 +30,21 @@ const Dashboard = () => {
     <>
       {/* Stats */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-        <StatCard title="Employees" value="120" icon={<FaUsers />} color="from-blue-500 to-indigo-500" />
-        <StatCard title="Departments" value="8" icon={<FaUserTie />} color="from-green-500 to-emerald-500" />
-        <StatCard title="On Leave" value="5" icon={<FaCalendarAlt />} color="from-yellow-500 to-orange-500" />
-        <StatCard title="Payroll Pending" value="3" icon={<FaMoneyCheckAlt />} color="from-red-500 to-pink-500" />
+        <StatCard title="Demo Text" value="120" icon={<FaUsers />} color="from-blue-500 to-indigo-500" />
+        <StatCard title="Demo Text" value="8" icon={<FaUserTie />} color="from-green-500 to-emerald-500" />
+        <StatCard title="Demo Text" value="5" icon={<FaCalendarAlt />} color="from-yellow-500 to-orange-500" />
+        <StatCard title="Demo Text" value="3" icon={<FaMoneyCheckAlt />} color="from-red-500 to-pink-500" />
       </div>
 
       {/* Recent Activity */}
       <div className="bg-white dark:bg-gray-800 rounded-xl shadow p-6">
         <h2 className="text-lg font-semibold mb-4 text-gray-700 dark:text-gray-200">
-          Recent Activities
+          Features
         </h2>
         <ul className="space-y-3 text-gray-600 dark:text-gray-300">
-          <ActivityItem text="John Doe marked attendance" />
-          <ActivityItem text="Payroll processed for IT department" />
-          <ActivityItem text="New employee added – Sarah Smith" />
-          <ActivityItem text="Leave approved for Mark" />
+          <ActivityItem text="Manage attendance of employee" />
+          <ActivityItem text="Manage leave of employee" />
+          <ActivityItem text="View own profile" />
         </ul>
       </div>
 

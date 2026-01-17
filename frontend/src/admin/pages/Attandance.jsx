@@ -9,7 +9,7 @@ const Attandance = () => {
   const { SearchFunction } = useFilterAttendance({ attendanceSummary, setTempSummary })
 
   if (loading) {
-    return "Loading";
+    return <p className="text-3xl text-gray-100">Loading</p>;
   }
 
   console.log(tempSummary, "attendanceSummary");
@@ -20,8 +20,8 @@ const Attandance = () => {
       </div>
 
 
-      <div className="bg-white dark:bg-gray-800 rounded-xl shadow p-3 h-[calc(77vh-1rem)] overflow-auto">
-        <div className="flex justify-between">
+      <div className="bg-white dark:bg-gray-800 rounded-xl w-[21rem] shadow p-3 h-[calc(77vh-1rem)] overflow-auto">
+        <div className="flex justify-between ">
           <h2 className="text-lg font-semibold mb-4 text-gray-700 dark:text-gray-200 ">
             All Attendance History
           </h2>
@@ -32,11 +32,11 @@ const Attandance = () => {
         </div>
         <div className='shadow'>
           <div className='flex text-blue-400'>
-            <div className='p-2 font-semibold w-16'>S.No.</div>
-            <div className='p-2 font-semibold w-35'>Name</div>
-            <div className='p-2 font-semibold w-35'>Email</div>
-            <div className='p-2 font-semibold w-35'>Date</div>
-            <div className='p-2 font-semibold w-40'>Status</div>
+            <div className='p-2 font-semibold w-15 shrink-0'>S.No.</div>
+            <div className='p-2 font-semibold w-25 shrink-0'>Name</div>
+            <div className='p-2 font-semibold w-35 shrink-0'>Email</div>
+            <div className='p-2 font-semibold w-35 shrink-0'>Date</div>
+            <div className='p-2 font-semibold w-40 shrink-0'>Status</div>
 
           </div>
 
@@ -48,11 +48,11 @@ const Attandance = () => {
               return (
 
                 <div className='flex text-blue-300 hover:bg-blue-50 dark:hover:bg-indigo-500' key={data._id}>
-                  <div className='p-2  w-16 text-center'>{index + 1}</div>
-                  <div className='p-2 w-35 text-green-300'>{data.name}</div>
-                  <div className='p-2 w-35 text-green-300'>{data.email}</div>
-                  <div className='p-2 w-35'>{data.todaysDate}</div>
-                  <div className='p-2 w-40 '>
+                  <div className='p-2 w-15 shrink-0 text-center'>{index + 1}</div>
+                  <div className='p-2 w-25 shrink-0 text-green-300'>{data.name}</div>
+                  <div className='p-2 w-35 shrink-0 text-green-300'>{data.email}</div>
+                  <div className='p-2 w-35 shrink-0'>{data.todaysDate}</div>
+                  <div className='p-2 w-40 shrink-0 '>
 
                     <select onChange={(e) => { handleAttendanceChanges(data._id, e.target.value) }} value={data.markattendaceStatus} className={`${data.markattendaceStatus == "Present" ? "text-green-300" : "text-red-300"}`}>
                       <option value="Present" className="text-green-300">Present</option>

@@ -5,7 +5,7 @@ const AppThemeContext = createContext();
 
 
 const AppThemeProvider = ({ children }) => {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   // Optional: persist theme in localStorage
   useEffect(() => {

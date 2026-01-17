@@ -7,7 +7,7 @@ const Attandance = () => {
     const {markTodaysAttendance,buttonText} = useMarkAttendance({refetch});
     
     if(loading){
-        return "Loading";
+        return <p className="text-3xl text-gray-100">Loading</p>;
     }
 
 // console.log(attendanceSummary,"attendanceSummary");

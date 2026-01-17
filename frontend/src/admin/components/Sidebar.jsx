@@ -43,7 +43,7 @@ const Sidebar = (props) => {
           <Link to="/admin/viewattendance" onClick={() => { setOpenSidebar(false) }} className={`${pathname=="/employee/attendance" && "bg-white/20"} flex items-center gap-3 p-3 rounded-lg cursor-pointer transition-all hover:bg-white/20 hover:bg-white/20 hover:translate-x-1 `}>
             <FaClipboardList /> Manage Attendance
           </Link>
-          <Link to="/admin/viewleave" className={`flex items-center gap-3 p-3 rounded-lg cursor-pointer transition-all hover:bg-white/20 hover:bg-white/20 hover:translate-x-1 `}>
+          <Link to="/admin/viewleave" onClick={() => { setOpenSidebar(false) }} className={`flex items-center gap-3 p-3 rounded-lg cursor-pointer transition-all hover:bg-white/20 hover:bg-white/20 hover:translate-x-1 `}>
             <FaMoneyCheckAlt /> Manage Leave
           </Link>
          

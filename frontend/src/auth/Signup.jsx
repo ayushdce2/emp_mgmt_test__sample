@@ -97,19 +97,7 @@ const Signup = () => {
                       </select>
                     </div>
                   </div>
-                  {/* Remember & Forgot */}
-                  {/* <div className="flex items-center justify-between">
-                    <label className="flex items-center text-sm text-gray-600">
-                      <input type="checkbox" className="mr-2" />
-                      Remember me
-                    </label>
-                    <a
-                      href="#"
-                      className="text-sm text-blue-600 hover:underline"
-                    >
-                      Forgot password?
-                    </a>
-                  </div> */}
+                  
         
                   {/* Button */}
                   <button

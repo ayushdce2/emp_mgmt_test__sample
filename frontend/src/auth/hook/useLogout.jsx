@@ -6,17 +6,14 @@ import API from '../../utility/axios.jsx';
 
 const useLogout = () => {
 
-  // const [loggedInUser,setloggedInUser]=useState("");
+
 
   const navigate = useNavigate();
 
-  // useEffect(()=>{
-  //   const storedUser = localStorage.getItem("loggedinuser");
-  //   setloggedInUser(storedUser);
-  // });
+
   const { userProfileDetails } = useUserDetails();
 
-  
+
 
 
   const handleLogout = async () => {
@@ -26,7 +23,7 @@ const useLogout = () => {
 
     try {
       // console.log(email, "email")
-      const res = await API.post("/auth/logout", {_id,email});
+      const res = await API.post("/auth/logout", { _id, email });
       const resJson = await res.data;
       // console.log(resJson,"<----------------resposne LOCAL");
       const { message, success, error, name, userRole } = resJson;
